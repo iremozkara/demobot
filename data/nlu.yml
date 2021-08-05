@@ -1,0 +1,159 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: chitchat/ask_cheer_up
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: request_names
+  examples: |
+    - i want to give you my name
+    - give name
+    - you need to know my name
+    - do you know my name?
+    
+- intent: faq/ask_devOps
+  examples: |
+    - what is devops
+    - what does devops mean
+    - what is the definition of devops
+    - tell me about devops
+    - devops
+- intent: faq/ask_yapi_kredi
+  examples: |
+    - tell me about yapi kredi
+    - what is yapi kredi
+    - give me info about yapi kredi
+    - give me information about yapi kredi
+- intent: faq/ask_important_tools
+  examples: |
+    - can you provide me some of the important devops technologies?
+    - name some devops technologies?
+    - what tools does devops use?
+- intent: faq/ask_purpose
+  examples: |
+    - what is your purpose
+    - what can you do
+    - how can you help me
+    - in which way you can help me
+- intent: chitchat/kind_response
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thanks for your help
+- intent: ask_weather
+  examples: |
+    - Whats the weather like?
+    - Tell me about todays forecast?
+    - hows the weather today?
+- intent: city
+  examples: |
+    - Berlin
+    - Istanbul
+    - Italy
+    - Delhi
+- intent: play_video
+  examples: |
+    - Can I see a video about yapı kredi?
+    - Find me a video about yapı kredi
+    - I want to watch a video about yapıkredi
+
+- intent: ask_date
+  examples: |
+    - What day is it?
+    - What month is it?
+    - What is todays date?
+    - Do you know the day?
+    - Do you have calender?
+- intent: ask_time
+  examples: |
+    - what time is it?
+    - can you tell time?
+    - Do you have the time?   
+
+
+
+
+# - intent: faq
+#   examples: |
+#     - name some devops technologies
+#     - What is your purpose

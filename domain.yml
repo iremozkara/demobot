@@ -1,0 +1,78 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- faq:
+    is_retrieval_intent: true
+- chitchat:
+    is_retrieval_intent: true
+- goodbye
+- greet
+- request_names
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- kind_response
+- city
+- play_video
+- ask_time
+- ask_date
+- ask_weather
+
+entities:
+- first_name
+slots:
+  first_name:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_chitchat/ask_cheer_up:
+  - text: 'Here is something to cheer you up {first_name}:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: 'Bye {first_name} '
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_first_name:
+  - text: Can I learn your name please?
+  utter_faq/ask_devOps:
+  - text: DevOps is a set of practices that works to automate and integrate the processes between software development and IT teams, so they can build, test, and release software faster and more reliably.
+  utter_faq/ask_yapi_kredi:
+  - text: Yapı Kredi is one of the first nationwide commercial banks in Turkey, and is the fourth largest publicly owned bank in Turkey by its asset size. It was established in 1944 by Kazım Taşkent.
+  utter_faq/ask_important_tools:
+  - text: 'There are so many tools used in DevOps, some of them are: Git Maven Selenium Jenkins Docker Puppet Chef Ansible Nagios'
+  utter_faq/ask_purpose:
+  - text: Hi, my purpose is demonstrating how can you use this framework
+  utter_submit:
+  - text: Thanks, for providing your name {first_name}. Do you have any questions?
+  utter_chitchat/kind_response:
+  - text: Im glad I could help! 
+  utter_city:
+  - text: "Which citys forecast should I check?"
+  utter_temp:
+  - text: "Todays temperature is {temp} degree Celcius"
+actions:
+- action_request_names
+- utter_faq
+- utter_goodbye
+- utter_greet
+- utter_slots_values
+- utter_submit
+- action_video
+- tell_time
+- tell_date
+- tell_weather
+forms:
+  name_form:
+    required_slots:
+      first_name:
+      - type: from_text
